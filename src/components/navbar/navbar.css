@@ -1,6 +1,42 @@
 .navbar {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
 
-    background-color: red;
+    padding: 0.5rem;
+
+    border-top: solid #000 2px;
+    border-bottom: solid #000 2px;
+}
+
+.material-symbols-outlined {
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.nav-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav-search-bar {
+    border-radius: 25px;
+}
+
+.nav-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.profile-nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2rem;
+    width: 2rem;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #000;
 }
