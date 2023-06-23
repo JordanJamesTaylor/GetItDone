@@ -1,0 +1,27 @@
+.current-tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex:1;
+    width: 100%;
+    height: 100%;
+    margin: 1rem;
+    overflow: auto;
+
+    background-color: cornflowerblue;
+}
+
+.current-task-scroll {
+    display: block;
+    height: 450px;
+}
+
+/*
+.current-task-scroll::-webkit-scrollbar {
+    display: none;
+} 
+
+.current-task-scroll::-webkit-scrollbar-track {
+    display: none;
+} 
+*/

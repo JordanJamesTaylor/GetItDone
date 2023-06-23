@@ -1,0 +1,14 @@
+.task-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+
+    height: 5rem;
+    width: 15rem;
+    border-radius: 25px;
+    border: solid black 3px;
+
+    background-color: gold;
+}

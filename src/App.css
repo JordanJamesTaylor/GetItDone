@@ -1,5 +1,23 @@
+::-webkit-scrollbar {
+  /*remove side scrollbar*/
+  display: none;
+}
+
 .main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  /*fills remaing space in container*/
+  flex: 1;
+}
+
+.tasks-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
