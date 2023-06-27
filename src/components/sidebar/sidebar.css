@@ -1,5 +1,6 @@
 .side-bar {
     flex-grow: 1;
+    border-right: solid 5px #000;
 
     background-color: green;
 }

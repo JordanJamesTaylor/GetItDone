@@ -6,7 +6,7 @@ export default function Havbar() {
     return (
         <nav className='navbar'>
             <div className='nav-left'>
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                     home
                 </span>
                 <input className='nav-search-bar' type="text" placeholder="Search.." />
@@ -15,13 +15,13 @@ export default function Havbar() {
             <span className='nav-bar-span' />
 
             <div className='nav-right'>
-                <div class="material-symbols-outlined">
+                <div className="material-symbols-outlined">
                     add
                 </div>
-                <div class="material-symbols-outlined">
+                <div className="material-symbols-outlined">
                     help
                 </div>
-                <div class="material-symbols-outlined">
+                <div className="material-symbols-outlined">
                     notifications
                 </div>
                 <div className='profile-nav-icon'>

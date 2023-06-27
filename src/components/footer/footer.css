@@ -1,6 +1,7 @@
 .footer {
     display: flex;
     justify-content: center;
-    
+    border-top: solid #000 5px;
+
     background-color: blue;
 }
