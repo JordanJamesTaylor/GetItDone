@@ -5,8 +5,8 @@
 
     padding: 0.5rem;
 
-    border-top: solid #000 5px;
-    border-bottom: solid #000 5px;
+    border-top: solid #000 2px;
+    border-bottom: solid #000 2px;
 }
 
 .material-symbols-outlined {
@@ -21,6 +21,7 @@
 
 .nav-search-bar {
     border-radius: 25px;
+    padding: 0.5rem;
 }
 
 .nav-right{

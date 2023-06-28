@@ -1,6 +1,35 @@
 .side-bar {
-    flex-grow: 1;
-    border-right: solid 5px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    background-color: green;
+    flex-grow: 0.1;
+    padding: 1rem;
+    border-right: solid 2px #000;
+
+    align-items: flex-start;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.categories {
+    display: none;
+}
+
+.categories.open {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-self: flex-end;
+}
+
+.categorie {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.5rem 0 0.5rem 0;
 }

@@ -6,9 +6,6 @@ export default function Havbar() {
     return (
         <nav className='navbar'>
             <div className='nav-left'>
-                <span className="material-symbols-outlined">
-                    home
-                </span>
                 <input className='nav-search-bar' type="text" placeholder="Search.." />
             </div>
 
