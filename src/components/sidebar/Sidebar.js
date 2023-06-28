@@ -10,17 +10,19 @@ export default function Sidebar() {
         { name: "Work", colour: "#00FF00" },
         { name: "Biscuit", colour: "#0000FF" }
     ];
+
+    const selectCat = (e) => console.log(`${e.target.id} category selected`);
     
     let displayCategories = myCategories.map((cat) => {
         return(
-            <div className='categorie'>
+            <button key={cat.name} id={cat.name} className='categorie' onClick={(e) => selectCat(e)}>
                 <div>
-                    <h4>{cat.name}</h4>
+                    <h4 id={cat.name}>{cat.name}</h4>
                 </div>
                 <div>
-                    <div style={{ borderRadius: '50%', backgroundColor: `${cat.colour}`, height: '1rem', width: '1rem' }} />
+                    <div id={cat.name} style={{ borderRadius: '50%', backgroundColor: `${cat.colour}`, height: '1rem', width: '1rem' }} />
                 </div>
-            </div>
+            </button>
         );
     });
 
@@ -31,19 +33,19 @@ export default function Sidebar() {
     return(
         <aside className='side-bar'>
             <div className='icons'>
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                     lists
                 </span>
                 <h4>Task View</h4>
             </div>
             <div className='icons'>
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                     calendar_month
                 </span>
                 <h4>Calendar View</h4>
             </div>
             <div className='icons'>
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                     folder
                 </span>
                 <h4>Categories</h4>

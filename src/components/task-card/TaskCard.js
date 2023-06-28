@@ -14,8 +14,9 @@ export default function TaskCard() {
             <div className='card-default'>
 
             <div className='checkbox'>
-                <label for='card-checbox' />
-                <input type="checkbox" />
+                <label name='card-checbox'>
+                    <input type='checkbox' />
+                </label>
             </div>
             <div className='card-text'>
                 <h1>Pay Credit Card Bill</h1>
@@ -40,12 +41,12 @@ export default function TaskCard() {
 
                 <div>
                     <h2 className='card-options'>date</h2>
-                    <label for='date-selector' />
-                    <input type='date' />
+                    <label name='date-selector'>
+                        <input type='date' />
+                    </label>
                 </div>
 
                 <div>
-                    <label for='category-selector' />
                     <h2 className='card-options'>category</h2>
                     <select>
                         <option value="volvo">Groceries</option>
@@ -56,7 +57,6 @@ export default function TaskCard() {
                 </div>
 
                 <div>
-                    <label for='frequency-selector' />
                     <h2 className='card-options'>repeats</h2>
                     <select>
                         <option value="volvo">doesn't repeat</option>
