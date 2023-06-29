@@ -1,0 +1,61 @@
+.task-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    padding: 1rem 0.5rem;
+    margin: 1rem;
+
+    /* height: 10rem; */
+
+    width: 50%;
+    border-radius: 25px;
+    border: solid black 3px;
+
+    box-shadow: 5px 5px 0px 4px #000;
+    background-color: gold;
+}
+
+.card-default, .selectors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.drop-down-arrow button{
+    margin: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.checkbox input {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.checkbox input[type=checkbox] {
+    accent-color: #000;
+}
+
+.card-options {
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-body {
+    padding: 5px;
+    border-top: 1px solid #E5E8EC;
+    display: none;
+}
+
+.dropdown-body.open {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  border: none;
+}
+  
