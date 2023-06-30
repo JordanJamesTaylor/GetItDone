@@ -6,9 +6,8 @@ export default function Havbar() {
     return (
         <nav className='navbar'>
             <div className='nav-left'>
-                <input className='nav-search-bar' type="text" placeholder="Search.." />
+                <input className='nav-search-bar' type="search" placeholder="Search.." />
             </div>
-
             <span className='nav-bar-span' />
 
             <div className='nav-right'>
