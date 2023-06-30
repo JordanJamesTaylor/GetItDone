@@ -28,3 +28,10 @@ const PORT = process.env.PORT || 5001; // pull var PORT from config.env
 const server = app.listen(PORT, () => { 
     console.log(`Server is listening on PORT: ${PORT}`);
 });
+
+// catch any unhandled errors
+process.on('unhandledRejection', (err, promise) => {
+    console.log(`Error: ${err.message}`);
+    // kill server with exit code 1 (unhandledRejection)
+    server.close(() => process.exit(1));
+});
