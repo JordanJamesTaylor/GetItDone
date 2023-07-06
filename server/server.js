@@ -8,6 +8,7 @@ const logger = require('./middleware/logger');
 const errorHandler = require('./middleware/error');
 const connectDB = require('./config/db');
 const fileupload = require('express-fileupload');
+const cookieParser = require('cookie-parser');
 
 dotenv.config({ path: './config/config.env'}); // connect to config file
 
@@ -18,6 +19,7 @@ const app = express(); // invoke express to access its methods
 app.use(bodyParser.json()); // parse application json
 // middlewares
 app.use(fileupload());
+app.use(cookieParser());
 app.use(logger);
 app.use(errorHandler);
 // end points
