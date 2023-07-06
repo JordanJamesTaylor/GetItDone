@@ -11,9 +11,9 @@ export default function TaskFilter() {
             </div>
 
             <div style={{ display: 'flex' }}>
-                <label class='switch'>
+                <label className='switch'>
                     <input type='checkbox' />
-                    <span class='slider'></span>
+                    <span className='slider'></span>
                 </label>
             <h2 style={{ marginLeft: '1rem' }}>Hide Finished</h2>
             </div>

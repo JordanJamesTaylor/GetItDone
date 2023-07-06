@@ -1,22 +1,28 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const validator = require('validator');
 
 const UserSchema = new Schema({
     username: {
         type: String,
         required: true,
+        minLength: [3, 'Username must be at least 3 characters long.']
     },
     email: {
         type: String,
-        lowercase: true,
         unique: true, 
-        required: true
+        required: true,
+        validate: (email) => validator.isEmail(email)
     },
     password: {
         type: String,
-        minLength: 5,
-        maxLength: 256,
-        required: true
+        minLength: [5, 'Username must be at least 5 characters long.'],
+        maxLength: [256, 'Password cannot be more than 256 characters.'],
+        required: true,
+        validate: (password) => validator.isStrongPassword(password)
+    },
+    image: {
+        type: String
     }
 }, {
     timestamps: true

@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const path = require('path');
 
 const getUsers = async (req, res, next) => {
     try{
@@ -79,6 +80,32 @@ const deleteUser = async (req, res, next) => {
     };
 };
 
+const postUserImage = async (req, res, next) => {
+    try {
+        const err = { msg: 'Error uploading image.' };
+        if(!req.files) next(err);
+
+        const file = req.files.file;
+
+        if(!file.mimetype.startsWith('image')) next(err);
+        if(file.size > process.env.MAX_FILE_SIZE) next(err);
+
+        file.name = `photo_${req.params.userId}${path.parse(file.name).ext}`;
+        const filePath = process.env.FILE_UPLOAD_PATH + file.name;
+
+        file.mv(filePath, async (err) => {
+
+            await User.findByIdAndUpdate(req.params.userId, { image: file.name });
+
+            res
+            .status(200)
+            .setHeader('Content-Type', 'application/json')
+            .json({ msg: 'Image uploaded' });
+        });
+    } catch (err) {
+        next(err);
+    };
+};
 
 module.exports = {
     getUsers,
@@ -86,5 +113,6 @@ module.exports = {
     createUser,
     putUser,
     deleteUsers,
-    deleteUser
+    deleteUser,
+    postUserImage
 };

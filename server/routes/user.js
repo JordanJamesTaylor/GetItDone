@@ -6,7 +6,8 @@ const {
     createUser,
     putUser,
     deleteUsers,
-    deleteUser
+    deleteUser,
+    postUserImage
 } = require('../controllers/userController');
 
 router.route('/')
@@ -18,5 +19,8 @@ router.route('/:userId')
     .get(getUser)
     .put(putUser)
     .delete(deleteUser)
+
+router.route('/:userId/image')
+    .post(postUserImage);
 
 module.exports = router;
